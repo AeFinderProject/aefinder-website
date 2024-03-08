@@ -39,6 +39,7 @@ export default function FeatureCard(props: FeatureCardProps) {
       <div className={styles.iconWrap}>
         {/* Two pictures are superimposed to speed up the speed of displaying pictures when hovering */}
         <CommonImage
+          quality={100}
           className={styles.iconHover}
           src={iconHover.filename_disk ? s3Url + iconHover.filename_disk : ''}
           width={iconHover.width ?? DEFAULT_ICON_SIZE.WIDTH}
@@ -46,6 +47,7 @@ export default function FeatureCard(props: FeatureCardProps) {
           alt="featureIcon"
         />
         <CommonImage
+          quality={100}
           className={styles.iconNormal}
           src={iconNormal.filename_disk ? s3Url + iconNormal.filename_disk : ''}
           width={iconNormal.width ?? DEFAULT_ICON_SIZE.WIDTH}

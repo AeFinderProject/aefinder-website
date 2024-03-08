@@ -47,6 +47,7 @@ export default function TopPicture({ module }: FeatureDescModuleProps) {
       <section className={styles.container}>
         <h1 className={styles.title}>{module.title?.text}</h1>
         <CommonImage
+          quality={100}
           src={module.image?.filename_disk ? s3Url + module.image.filename_disk : ''}
           className={clsx(['flex-row-center', styles.image])}
           alt="homeMainImage"

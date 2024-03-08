@@ -91,6 +91,7 @@ export default function BrandModule({ type, moduleData }: BrandModuleProps) {
         {/* section 4: hero image */}
         <div className={styles.mainImage}>
           <CommonImage
+            quality={100}
             src={moduleData.image.filename_disk ? s3Url + moduleData.image.filename_disk : ''}
             width={640}
             height={640}

@@ -32,6 +32,7 @@ export default function CardListModule({ moduleData }: ICardListModuleProps) {
               style={{ backgroundColor: commonStyles.defaultImgContainerBackgroundColor }}
               className={styles.cardImgContainer}>
               <CommonImage
+                quality={100}
                 width={520}
                 height={242}
                 src={item.icon?.filename_disk ? s3Url + item?.icon.filename_disk : ''}

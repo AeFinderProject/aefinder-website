@@ -101,6 +101,7 @@ export default function HomeTwoColumnsCard(props: HomeTwoColumnsCardProps) {
   const imgUI = () => {
     return (
       <CommonImage
+        quality={100}
         src={imgSrc}
         width={500}
         height={500}

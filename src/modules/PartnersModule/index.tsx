@@ -32,6 +32,7 @@ export default function PartnersModule({ module }: IPartnersModuleProps) {
                   item.url && window.open(item.url);
                 }}>
                 <CommonImage
+                  quality={100}
                   width={200}
                   height={50}
                   src={item.logoImage?.filename_disk ? s3Url + item.logoImage?.filename_disk : ''}
