@@ -1,0 +1,110 @@
+/* stylelint-disable selector-class-pattern */
+@import '/src/assets/theme/color.scss';
+@import '/src/assets/theme/constants.scss';
+
+.imgWrapper {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.imgBox {
+  max-width: 1080px;
+}
+
+.divider {
+  margin-bottom: 0;
+}
+
+.graphicTextModule {
+  background-color: $page-bg;
+
+  .sectionTitle {
+    word-wrap: break-word;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .sectionTitleCol {
+    word-wrap: break-word;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: WorkSans-Bold, PingFangSC-Semibold, PingFang SC, sans-serif;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .sectionSubTitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 18px;
+    text-align: center;
+    color: $secondary-text;
+  }
+
+  .sectionSubTitleCol {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 18px;
+    text-align: center;
+    color: $secondary-text;
+  }
+
+  .graphicTextModuleItem {
+    overflow: hidden;
+    margin-bottom: 120px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .graphicTextModuleTitle {
+    margin-bottom: 80px;
+  }
+  .image {
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  @media screen and (max-width: $divide-991) {
+    .sectionTitle {
+      font-size: 30px;
+      line-height: 40px;
+      max-width: 652px;
+      min-width: $content-width-mobile;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .sectionTitleCol {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 352px;
+      min-width: $content-width-mobile;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .graphicTextModuleItem {
+      margin-bottom: 100px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .graphicTextModuleTitle {
+      margin-bottom: 40px;
+    }
+    .image {
+      max-width: 295px;
+      max-height: 295px;
+    }
+  }
+}
