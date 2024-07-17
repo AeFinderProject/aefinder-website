@@ -10,10 +10,10 @@ import { s3Url } from '@/constants/network';
 import { Footer } from '@/types/global/footer';
 
 export interface INavFooter {
-  className?: string;
-  style?: CSSProperties;
-  footerMediaClassName?: string;
-  data: Footer;
+  readonly className?: string;
+  readonly style?: CSSProperties;
+  readonly footerMediaClassName?: string;
+  readonly data: Footer;
 }
 
 export default function NavFooter({ className, style, footerMediaClassName, data }: INavFooter) {
@@ -58,7 +58,8 @@ export default function NavFooter({ className, style, footerMediaClassName, data
     <footer
       id="website-footer"
       className={clsx(['section-container', 'flex-row-content-center', styles.footer, className])}
-      style={{ backgroundColor: data.commonStyles?.defaultBackgroundColor, ...style }}>
+      style={{ backgroundColor: data.commonStyles?.defaultBackgroundColor, ...style }}
+    >
       <div className={clsx(['page-container', styles.footerBody])}>
         <div className={styles.footerNav} style={{ display: 'none' }}>
           <div className={clsx('flex-column', styles.footerLogoWrapper)}>
@@ -88,7 +89,8 @@ export default function NavFooter({ className, style, footerMediaClassName, data
                           <div
                             key={'FooterSecondMenu-' + v.title + k}
                             className={styles.secondMenus}
-                            onClick={() => switchPage(v.type, v.path)}>
+                            onClick={() => switchPage(v.type, v.path)}
+                          >
                             {v.title}
                           </div>
                         );
@@ -100,7 +102,8 @@ export default function NavFooter({ className, style, footerMediaClassName, data
         </div>
         <div
           className={clsx([styles.footerMedia, footerMediaClassName])}
-          style={{ borderTopColor: data.commonStyles?.dividingLineColor }}>
+          style={{ borderTopColor: data.commonStyles?.dividingLineColor }}
+        >
           <div className={styles.footerPower}>
             Copyright @{getFullYear()} {data.powerName.text}
           </div>
@@ -111,7 +114,8 @@ export default function NavFooter({ className, style, footerMediaClassName, data
                   key={'FooterSocialMedia-' + item.name + index}
                   onMouseOver={() => showActiveMedia(index)}
                   onMouseOut={() => showActiveMedia(-1)}
-                  className="flex-row-center">
+                  className="flex-row-center"
+                >
                   <LinkForBlank
                     href={item.link}
                     className={styles.iconBase}

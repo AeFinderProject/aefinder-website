@@ -16,9 +16,9 @@ enum HiddenSecondType {
 }
 
 export type NavHeaderMobileMenuProps = {
-  isOpen: boolean;
-  data: Header;
-  callback: () => void;
+  readonly isOpen: boolean;
+  readonly data: Header;
+  readonly callback: () => void;
 };
 
 export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: NavHeaderMobileMenuProps) {
@@ -59,7 +59,8 @@ export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: 
       showCloseButton={false}
       className="navHeaderMobileMenu"
       bodyClassName={styles.navHeaderMobileMenuBody}
-      stopPropagation={['click']}>
+      stopPropagation={['click']}
+    >
       <div className={clsx(['flex-row-between', styles.logoRow])}>
         <CommonImage
           src={data.logo?.filename_disk ? s3Url + data.logo.filename_disk : ''}
@@ -93,19 +94,22 @@ export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: 
                     item?.children?.length === 0
                       ? () => switchPage(item.type, item.path, onClose)
                       : () => showSecondMenus(index)
-                  }>
+                  }
+                >
                   <span className="header-nav-btn overflow-x-hidden">{item.title}</span>
                   {item?.children?.length > 0 && <MenuArrowSVG />}
                 </div>
                 {item?.children?.length > 0 && (
                   <div
-                    className={clsx([styles.secondMenuList, item?.isShowSecondMenus ? styles.visible : styles.hidden])}>
+                    className={clsx([styles.secondMenuList, item?.isShowSecondMenus ? styles.visible : styles.hidden])}
+                  >
                     {item.children.map((v, k) => {
                       return (
                         <div
                           key={'NavHeaderMobileMenu-second-' + v.title + k}
                           className={clsx(['overflow-x-hidden', styles.secondMenu])}
-                          onClick={() => switchPage(v.type, v.path, onClose)}>
+                          onClick={() => switchPage(v.type, v.path, onClose)}
+                        >
                           {v.title}
                         </div>
                       );
@@ -121,7 +125,8 @@ export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: 
           <Button
             type="text"
             className={styles.downloadBtn}
-            onClick={() => openWithBlank(data.actionButton?.link.url || '')}>
+            onClick={() => openWithBlank(data.actionButton?.link.url || '')}
+          >
             {data?.actionButton.text}
           </Button>
         )}

@@ -11,7 +11,7 @@ import useGetVertical from '@/hooks/useGetVertical';
 import styles from './styles.module.scss';
 
 export interface FeatureDescModuleProps {
-  module: IGraphicTextModule;
+  readonly module: IGraphicTextModule;
 }
 
 export default function TopPicture({ module }: FeatureDescModuleProps) {
@@ -28,7 +28,7 @@ export default function TopPicture({ module }: FeatureDescModuleProps) {
               key={'TopPicture_Description' + '_' + idx}
               iconSrc={item.icon?.filename_disk ? s3Url + item.icon?.filename_disk : ''}
               gap={10}
-              content={item.text || ''}
+              content={item.text ?? ''}
             />
           ))}
         </div>
@@ -43,7 +43,8 @@ export default function TopPicture({ module }: FeatureDescModuleProps) {
         paddingTop: getVertical(module.commonStyles).top + 'px',
         paddingBottom: getVertical(module.commonStyles).bottom + 'px',
         backgroundColor: defaultBackgroundColor,
-      }}>
+      }}
+    >
       <section className={styles.container}>
         <h1 className={styles.title}>{module.title?.text}</h1>
         <CommonImage
@@ -54,7 +55,6 @@ export default function TopPicture({ module }: FeatureDescModuleProps) {
           priority
           width={1080}
           height={500}
-          layout="intrinsic" // TODO
         />
         <div className={styles.content}>{renderTxt}</div>
       </section>

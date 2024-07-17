@@ -6,7 +6,7 @@ import { s3Url } from '@/constants/network';
 import useGetVertical from '@/hooks/useGetVertical';
 
 interface IPartnersModuleProps {
-  module: IPartnersModule;
+  readonly module: IPartnersModule;
 }
 
 export default function PartnersModule({ module }: IPartnersModuleProps) {
@@ -18,19 +18,21 @@ export default function PartnersModule({ module }: IPartnersModuleProps) {
       style={{
         paddingTop: getVertical(commonStyles).top + 'px',
         paddingBottom: getVertical(commonStyles).bottom + 'px',
-      }}>
+      }}
+    >
       <section className={styles.content}>
         <h1 className={styles.sectionTitle}>{title?.text}</h1>
         <div className={styles.partnersList}>
           {list?.map((item, index) => {
             return (
               <div
-                key={index}
+                key={index + `${item?.url}`}
                 className={styles.partnerItem}
                 style={{ backgroundColor: commonStyles.defaultCardBackgroundColor }}
                 onClick={() => {
                   item.url && window.open(item.url);
-                }}>
+                }}
+              >
                 <CommonImage
                   quality={100}
                   width={200}
@@ -38,7 +40,6 @@ export default function PartnersModule({ module }: IPartnersModuleProps) {
                   src={item.logoImage?.filename_disk ? s3Url + item.logoImage?.filename_disk : ''}
                   className={styles.cardImg}
                   alt="partnerImage"
-                  layout="intrinsic"
                   priority
                 />
               </div>

@@ -3,14 +3,14 @@ import styles from './styles.module.scss';
 import { CSSProperties } from 'react';
 import clsx from 'clsx';
 export type CommonButtonProps = {
-  className?: string;
-  style?: CSSProperties;
-  fontColor?: string;
-  backgroundColor?: string;
-  borderColor?: string;
-  width?: string | number;
-  text: string;
-  onClick?: () => void;
+  readonly className?: string;
+  readonly style?: CSSProperties;
+  readonly fontColor?: string;
+  readonly backgroundColor?: string;
+  readonly borderColor?: string;
+  readonly width?: string | number;
+  readonly text: string;
+  readonly onClick?: () => void;
 };
 
 export default function CommonButton({
@@ -27,7 +27,8 @@ export default function CommonButton({
     <Button
       className={clsx(styles.commonButton, className)}
       style={{ ...style, color: fontColor, backgroundColor: backgroundColor, borderColor: borderColor, width }}
-      onClick={onClick}>
+      onClick={onClick}
+    >
       {text}
     </Button>
   );

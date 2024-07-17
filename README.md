@@ -1,6 +1,7 @@
 # AeFinder
+
 A Powerful Indexer for Blockchain Data Access.
-  
+
 Open [https://home.aefinder.io](https://home.aefinder.io) to visit the website.
 
 ## How to use
@@ -12,7 +13,6 @@ In the project directory, you can run:
 Install dependencies.
 
 ### `yarn dev`
-
 
 ### `yarn build:dev`
 

@@ -12,8 +12,8 @@ import CommonButton from '@/components/CommonButton';
 import useGetVertical from '@/hooks/useGetVertical';
 
 export interface BrandModuleProps {
-  type: DEVICE_TYPE;
-  moduleData: IBrandModule;
+  readonly type: DEVICE_TYPE;
+  readonly moduleData: IBrandModule;
 }
 
 export default function BrandModule({ type, moduleData }: BrandModuleProps) {
@@ -32,13 +32,15 @@ export default function BrandModule({ type, moduleData }: BrandModuleProps) {
         })`,
         paddingTop: getVertical(moduleData.commonStyles).top + 'px',
         paddingBottom: getVertical(moduleData.commonStyles).bottom + 'px',
-      }}>
+      }}
+    >
       <section className={clsx([styles.brandModuleContainer, styles.brandModule])}>
         <section className={styles.brandModuleLeft}>
           {/* section 1: title */}
           <div
             className={styles.title}
-            style={{ fontFamily: 'WorkSans-Bold', letterSpacing: type === DEVICE_TYPE.IOS ? -1 : 'normal' }}>
+            style={{ fontFamily: 'WorkSans-Bold', letterSpacing: type === DEVICE_TYPE.IOS ? -1 : 'normal' }}
+          >
             {moduleData.title.text}
           </div>
 

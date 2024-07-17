@@ -78,29 +78,28 @@
   }
 }
 
-@media screen  and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .partnerItem {
     width: 262px;
     height: 80px;
   }
 }
 
-@media screen  and (max-width: 579px) {
+@media screen and (max-width: 579px) {
   .partnerItem {
     width: 160px;
     height: 80px;
   }
 }
 
-@media screen  and (max-width: 375px) {
+@media screen and (max-width: 375px) {
   .partnerItem {
     width: calc((100vw - 60px) / 2);
   }
 }
 
-@media screen  and (max-width: 360px) {
+@media screen and (max-width: 360px) {
   .partnerItem {
     width: 150px;
   }
 }
-

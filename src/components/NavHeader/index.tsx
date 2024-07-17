@@ -50,7 +50,8 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
             <div
               key={`HeaderSecondMenu-${item.title}-${index}`}
               onClick={() => switchPage(item.type, item.path)}
-              className={styles.secondMenuItem}>
+              className={styles.secondMenuItem}
+            >
               {item.title}
             </div>
           );
@@ -91,7 +92,8 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
         styles.navBlackHeader,
         className,
       ])}
-      style={{ backgroundColor: data.commonStyles?.defaultBackgroundColor, ...style }}>
+      style={{ backgroundColor: data.commonStyles?.defaultBackgroundColor, ...style }}
+    >
       <div className={clsx([styles.navHeader])}>
         <CommonImage
           quality={100}
@@ -120,7 +122,8 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
                         trigger={['hover', 'click']}
                         placement="bottom"
                         overlayClassName={styles.secondMenus}
-                        onOpenChange={(open) => showSecondMenus(idx, open)}>
+                        onOpenChange={(open) => showSecondMenus(idx, open)}
+                      >
                         <div
                           className={clsx([
                             'header-nav-btn',
@@ -128,7 +131,8 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
                             'flex-center',
                             styles.firstMenuWithChild,
                             item?.isShowSecondMenus ? styles.rotateSvg : null,
-                          ])}>
+                          ])}
+                        >
                           {item.title}
                           <MenuArrowSVG />
                         </div>
@@ -153,7 +157,8 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
                 className={styles.linkBtnWrap}
                 onClick={() =>
                   openWithBlank(data.actionButton?.link.url || '', data.actionButton?.link.target || '_blank')
-                }>
+                }
+              >
                 <div
                   className={styles.actionButton}
                   style={{
@@ -161,7 +166,8 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
                     borderColor: data.actionButton.commonStyles.default.borderColor,
                     color: data.actionButton.commonStyles.default.fontColor,
                     width: data.actionButton.commonStyles.width ? data.actionButton.commonStyles.width + 'px' : 'auto',
-                  }}>
+                  }}
+                >
                   {data.actionButton.text}
                 </div>
               </div>

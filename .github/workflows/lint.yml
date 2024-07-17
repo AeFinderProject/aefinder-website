@@ -32,3 +32,9 @@ jobs:
 
       - name: 🔎 Type check
         run: yarn typecheck
+
+      - name: 💅 Prettier check
+        run: yarn format:check
+
+      - name: 🃏 Run jest
+        run: yarn test --passWithNoTests

@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-// import FeatureCard from '@/components/FeatureCard';
 import { INITIAL, variantDownToUp, VIEWPORT, WHILE_IN_VIEW } from '@/constants/motion';
 import { IFeatureCardModule } from '@/types/modules/featureCardModule';
 import useGetVertical from '@/hooks/useGetVertical';
@@ -23,7 +22,8 @@ export default function FeatureCardModule({ module: { title, subTitle, commonSty
           paddingTop: getVertical(commonStyles || {}).top + 'px',
           paddingBottom: getVertical(commonStyles || {}).bottom + 'px',
           backgroundColor: defaultBackgroundColor,
-        }}>
+        }}
+      >
         <div className={clsx(['flex-column-center'], styles.featureCardModuleContentWrapper)}>
           {(!!title?.text || !!subTitle?.text) && (
             <motion.div variants={variantDownToUp(0)}>
@@ -77,24 +77,6 @@ export default function FeatureCardModule({ module: { title, subTitle, commonSty
               </Col>
             </Row>
           </div>
-          {/* {!!featureList?.length && (
-            <motion.div variants={variantDownToUp(1)}>
-              <div className={styles.sectionCardWrapper}>
-                {featureList?.map((item, idx) => {
-                  return (
-                    <FeatureCard
-                      key={'FeatureCard_' + idx}
-                      className={styles.card}
-                      style={{
-                        backgroundColor: commonStyles?.defaultCardBackgroundColor,
-                      }}
-                      item={item}
-                    />
-                  );
-                })}
-              </div>
-            </motion.div>
-          )} */}
         </div>
       </section>
     </motion.div>
