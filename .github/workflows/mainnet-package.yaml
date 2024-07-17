@@ -15,7 +15,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.REPOSITORY_REGION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ secrets.REPOSITORY }}/aefinder-web # change this to your project frontend name
+          images: ${{ secrets.REPOSITORY_REGION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ secrets.REPOSITORY }}/aefinder-website # change this to your project frontend name
           tags: |
             type=ref,event=tag
       - name: Set up Docker Buildx
@@ -31,4 +31,4 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            ENVIRONMENT=mainnet
+            ENVIRONMENT=pro
