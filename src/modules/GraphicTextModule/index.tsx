@@ -60,7 +60,8 @@ export default function GraphicTextModule({ module }: GraphicTextModuleProps) {
             paddingTop: getVertical(module.commonStyles).top + 'px',
             paddingBottom: getVertical(module.commonStyles).bottom + 'px',
             color: module.commonStyles?.fontColor,
-          }}>
+          }}
+        >
           <HomeTwoColumnsCard
             className={styles.graphicTextModuleItem}
             style={{ color: module.commonStyles?.fontColor }}

@@ -50,13 +50,13 @@
 .cardItemTitle {
   font-size: 22px;
   font-weight: 700;
-  line-height: 30px; 
+  line-height: 30px;
   color: var(--primaryText);
 }
 
 .cardItemSubTitle {
   font-size: 16px;
-  line-height: 24px; 
+  line-height: 24px;
   margin-top: 8px;
   color: var(--secondaryText);
 }
@@ -92,8 +92,8 @@
   padding: 40px 20px 0;
   overflow: hidden;
   border-radius: 6px;
-  background-color: #F5F5F5;
-  border: 1px solid #E0E0E0;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
 }
 
 .cardTitleColBox {
@@ -107,7 +107,7 @@
   font-weight: 700;
   font-family: WorkSans-Bold, PingFangSC-Semibold, PingFang SC, sans-serif;
   line-height: 24px;
-  color: #1A1A1A;
+  color: #1a1a1a;
 }
 
 .cardDescriptionCol {
@@ -151,7 +151,7 @@
   }
   .cardItemSubTitle {
     font-size: 14px;
-    line-height: 22px; 
+    line-height: 22px;
   }
   .cardImgContainer {
     height: 212px;
@@ -185,4 +185,3 @@
     }
   }
 }
-

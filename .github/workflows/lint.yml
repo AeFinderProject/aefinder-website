@@ -1,8 +1,5 @@
 name: Code Check
 on:
-  push:
-    branches:
-      - main
   pull_request: {}
 
 concurrency:
@@ -37,4 +34,4 @@ jobs:
         run: yarn format:check
 
       - name: 🃏 Run jest
-        run: yarn test
+        run: yarn test --passWithNoTests

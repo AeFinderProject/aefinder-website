@@ -5,7 +5,7 @@ import useGetVertical from '@/hooks/useGetVertical';
 import styles from './styles.module.scss';
 
 interface IInfiniteScrollCarouselModuleProps {
-  module: IInfiniteScrollCarouselModule;
+  readonly module: IInfiniteScrollCarouselModule;
 }
 
 export default function InfiniteScrollCarouselModule({
@@ -20,7 +20,8 @@ export default function InfiniteScrollCarouselModule({
         paddingTop: getVertical(commonStyles).top + 'px',
         paddingBottom: getVertical(commonStyles).bottom + 'px',
         backgroundColor: defaultBackgroundColor,
-      }}>
+      }}
+    >
       {!!title?.text && <div className={styles.title}>{title.text}</div>}
       <InfiniteScrollCarousel carouselList={carouselList} />
     </section>
