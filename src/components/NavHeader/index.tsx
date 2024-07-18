@@ -75,13 +75,6 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
     }
   }, [data]);
 
-  const logoWidth = useMemo(() => {
-    if (data.logo?.width && data.logo?.height) {
-      return (Number(data.logo.width) / Number(data.logo.height)) * 32;
-    }
-    return 200;
-  }, [data.logo?.height, data.logo?.width]);
-
   return (
     <header
       id="website-header"
@@ -98,7 +91,7 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
         <CommonImage
           quality={100}
           src={data.logo?.filename_disk ? s3Url + data.logo.filename_disk : ''}
-          style={{ width: logoWidth, height: 32, cursor: 'pointer' }}
+          style={{ width: 150, height: 24, cursor: 'pointer' }}
           fill
           alt="websiteLogo"
           onClick={() => jumpOrScrollToTop(ROUTER.DEFAULT)}
