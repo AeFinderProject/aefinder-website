@@ -152,6 +152,10 @@
 }
 
 @media screen and (max-width: $divide-991) {
+  .headerContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .menuIcon {
     display: block;
   }

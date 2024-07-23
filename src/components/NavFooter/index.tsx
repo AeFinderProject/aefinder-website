@@ -57,10 +57,10 @@ export default function NavFooter({ className, style, footerMediaClassName, data
   return (
     <footer
       id="website-footer"
-      className={clsx(['section-container', 'flex-row-content-center', styles.footer, className])}
+      className={clsx(['flex-row-content-center', styles.footer, className])}
       style={{ backgroundColor: data.commonStyles?.defaultBackgroundColor, ...style }}
     >
-      <div className={clsx(['page-container', styles.footerBody])}>
+      <div className={clsx([styles.footerBody])}>
         <div className={styles.footerNav} style={{ display: 'none' }}>
           <div className={clsx('flex-column', styles.footerLogoWrapper)}>
             <CommonImage

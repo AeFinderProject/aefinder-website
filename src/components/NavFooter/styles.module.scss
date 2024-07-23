@@ -67,17 +67,19 @@
 
   .footerMedia {
     height: 64px;
-    border-top: 1px solid $dividers;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #f7f9fd;
 
     .iconBase {
       width: 24px;
       height: 24px;
-      margin-right: 22px;
       cursor: pointer;
+      margin-left: 22px;
     }
 
     .footerPower {
@@ -86,7 +88,12 @@
       color: #808080;
     }
   }
-
+  @media screen and (max-width: $divide-991) {
+    .footerMedia {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
   @media screen and (max-width: $divide-767) {
     .footerNav {
       flex-direction: column;
@@ -110,8 +117,12 @@
       justify-content: flex-start;
       padding-top: 20px;
 
+      .iconBase {
+        margin-left: 0;
+        margin-right: 22px;
+      }
       .footerPower {
-        margin-top: 8px;
+        margin-bottom: 8px;
       }
     }
   }
