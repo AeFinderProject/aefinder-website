@@ -105,7 +105,7 @@ export default function NavFooter({ className, style, footerMediaClassName, data
           style={{ borderTopColor: data.commonStyles?.dividingLineColor }}
         >
           <div className={styles.footerPower}>
-            Copyright @{getFullYear()} {data.powerName.text}
+            Copyright © {getFullYear()} {data.powerName.text}
           </div>
           <div className="flex-row-center">
             {socialMediaData?.map((item, index) => {
