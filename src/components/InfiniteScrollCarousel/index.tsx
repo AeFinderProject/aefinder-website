@@ -7,7 +7,7 @@ import { s3Url } from '@/constants/network';
 import styles from './styles.module.scss';
 
 interface IInfiniteScrollCarouselProps {
-  carouselList: IInfiniteScrollCarouselItem[];
+  readonly carouselList: IInfiniteScrollCarouselItem[];
 }
 
 const SCROLL_CONTENT_GAP = 60;
@@ -78,14 +78,16 @@ export default function InfiniteScrollCarousel({ carouselList }: IInfiniteScroll
     <div ref={wrapperRef} className={styles.infiniteScrollCarouselWrapper}>
       <motion.div
         className={clsx('flex-row-center', styles.scrollContent, { ['flex-center']: !isScrollNeeded })}
-        animate={controls}>
+        animate={controls}
+      >
         <div ref={contentRef} className={clsx('flex-row-center', 'flex-none', styles.carouselItemsWrapper)}>
           {renderCarouselItems()}
         </div>
         <div
           className={clsx('flex-row-center', 'flex-none', styles.carouselItemsWrapper, {
             [styles.displayNone]: !isScrollNeeded,
-          })}>
+          })}
+        >
           {renderCarouselItems()}
         </div>
       </motion.div>

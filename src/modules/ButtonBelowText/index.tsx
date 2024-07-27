@@ -9,7 +9,7 @@ import { s3Url } from '@/constants/network';
 import useGetVertical from '@/hooks/useGetVertical';
 
 export interface IButtonBelowTextProps {
-  module: IButtonBelowTextModule;
+  readonly module: IButtonBelowTextModule;
 }
 
 export function ButtonBelowTextModule({ module }: IButtonBelowTextProps) {
@@ -22,7 +22,8 @@ export function ButtonBelowTextModule({ module }: IButtonBelowTextProps) {
         backgroundColor: commonStyles.defaultBackgroundColor,
         paddingTop: getVertical(commonStyles).top + 'px',
         paddingBottom: getVertical(commonStyles).bottom + 'px',
-      }}>
+      }}
+    >
       <section className={styles.container}>
         <h1 className={styles.title}>{title.text}</h1>
         {Array.isArray(descriptionList) && descriptionList.length > 0 && (

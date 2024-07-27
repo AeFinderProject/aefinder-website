@@ -35,7 +35,8 @@ export default function RowDescription(props: RowDescriptionProps) {
   return (
     <div
       className={clsx([styles.rowDescription, className])}
-      style={{ marginBottom: isLast ? '0' : multiLayer ? '40px' : '16px' }}>
+      style={{ marginBottom: isLast ? '0' : multiLayer ? '40px' : '16px' }}
+    >
       {iconSrc && (
         <CommonImage
           src={iconSrc}

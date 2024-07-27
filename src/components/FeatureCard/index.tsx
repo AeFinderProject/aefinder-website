@@ -6,9 +6,9 @@ import { s3Url } from '@/constants/network';
 import styles from './styles.module.scss';
 
 interface FeatureCardProps {
-  className?: string;
-  style?: CSSProperties;
-  item: IFeatureCardItem;
+  readonly className?: string;
+  readonly style?: CSSProperties;
+  readonly item: IFeatureCardItem;
 }
 
 const DEFAULT_ICON_SIZE = {
@@ -35,7 +35,8 @@ export default function FeatureCard(props: FeatureCardProps) {
       className={clsx(styles.featureCardWrapper, className)}
       style={style}
       onMouseOver={onMouseOver}
-      onMouseOut={onMouseOut}>
+      onMouseOut={onMouseOut}
+    >
       <div className={styles.iconWrap}>
         {/* Two pictures are superimposed to speed up the speed of displaying pictures when hovering */}
         <CommonImage

@@ -29,7 +29,7 @@
   height: 64px;
   align-items: center;
   cursor: pointer;
-  color:  var(--firstMenuDefaultFontColor);
+  color: var(--firstMenuDefaultFontColor);
   svg {
     @include rotate(0deg, 0.2s);
     path {

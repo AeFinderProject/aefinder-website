@@ -5,8 +5,8 @@ import { useCallback } from 'react';
 import { openWithBlank } from '@/utils/router';
 
 export type GoDownloadPageButtonProps = {
-  downloadPageBtnClassName?: string;
-  url: string;
+  readonly downloadPageBtnClassName?: string;
+  readonly url: string;
 };
 
 export default function GoDownloadPageButton({ downloadPageBtnClassName, url }: GoDownloadPageButtonProps) {
@@ -18,7 +18,8 @@ export default function GoDownloadPageButton({ downloadPageBtnClassName, url }: 
     <Button
       type="dashed"
       className={clsx([styles.goDownloadPageBtn, downloadPageBtnClassName])}
-      onClick={goDownloadPageUrl}>
+      onClick={goDownloadPageUrl}
+    >
       Download for Others
     </Button>
   );

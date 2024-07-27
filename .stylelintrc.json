@@ -12,7 +12,7 @@
       true,
       {
         "ignoreFontFamilies": [
-          "Roboto-Regular",
+          "Roboto",
           "Roboto-Bold",
           "Roboto-Medium",
           "WorkSans-Bold",

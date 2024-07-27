@@ -1,55 +1,16 @@
 import { ICardListModule } from '@/types/modules/cardListModule';
 import styles from './style.module.scss';
-// import CommonImage from '@/components/CommonImage';
-// import { s3Url } from '@/constants/network';
 import clsx from 'clsx';
 import useGetVertical from '@/hooks/useGetVertical';
 import { Row, Col } from 'antd';
 import Image from 'next/image';
 export interface ICardListModuleProps {
-  moduleData: ICardListModule;
+  readonly moduleData: ICardListModule;
 }
 
 export default function CardListModule({ moduleData }: ICardListModuleProps) {
   const { title, subTitle, commonStyles } = moduleData;
   const { getVertical } = useGetVertical();
-
-  // const cardList = (
-  //   <section className={styles.cardList}>
-  //     {dataArray?.map((item, index) => {
-  //       return (
-  //         <section
-  //           key={index + `${item?.icon?.filename_disk}`}
-  //           className={styles.cardItem}
-  //           style={{
-  //             backgroundColor: commonStyles.defaultCardBackgroundColor,
-  //           }}>
-  //           {item.text && (
-  //             <section className={styles.cardDesc}>
-  //               <h2 className={styles.cardItemTitle}>{item.text}</h2>
-  //               <h3 className={styles.cardItemSubTitle}>{item.subText}</h3>
-  //             </section>
-  //           )}
-  //           <section
-  //             key={index + `${item?.icon?.filename_disk}`}
-  //             style={{ backgroundColor: commonStyles.defaultImgContainerBackgroundColor }}
-  //             className={styles.cardImgContainer}>
-  //             <CommonImage
-  //               quality={100}
-  //               width={0}
-  //               height={0}
-  //               src={item.icon?.filename_disk ? s3Url + item?.icon.filename_disk : ''}
-  //               className={styles.cardImg}
-  //               alt="cardImage"
-  //               priority
-  //               style={{ width: '100%', height: 'auto' }}
-  //             />
-  //           </section>
-  //         </section>
-  //       );
-  //     })}
-  //   </section>
-  // );
 
   const cardList = (
     <div>
@@ -150,7 +111,8 @@ export default function CardListModule({ moduleData }: ICardListModuleProps) {
         backgroundColor: commonStyles.defaultBackgroundColor,
         paddingTop: getVertical(commonStyles).top + 'px',
         paddingBottom: getVertical(commonStyles).bottom + 'px',
-      }}>
+      }}
+    >
       <section className={styles.cardListModule}>
         {title?.text && <h1 className={styles.title}>{title?.text}</h1>}
         {subTitle?.text && <h3 className={styles.subTitle}>{subTitle?.text}</h3>}
