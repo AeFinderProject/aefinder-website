@@ -30,7 +30,7 @@ export default function GraphicTextModule({ module }: GraphicTextModuleProps) {
             <div className={styles.sectionTitleCol}>Fast Indexing</div>
             <div className={styles.sectionSubTitleCol}>
               With AeFinder is advanced indexing infrastructure, data is efficiently retrieved from blockchain and
-              delivered to AeIndexer.
+              delivered to dApps.
             </div>
           </Col>
           <Col md={24} lg={8} style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -46,7 +46,7 @@ export default function GraphicTextModule({ module }: GraphicTextModuleProps) {
             <div className={styles.sectionTitleCol}>Robust Performance</div>
             <div className={styles.sectionSubTitleCol}>
               AeFinder ensures a reliable indexing experience with over 99.99% uptime, designed to meet the demands of
-              data-intensive AeIndexer.
+              data-intensive dApps.
             </div>
           </Col>
         </Row>

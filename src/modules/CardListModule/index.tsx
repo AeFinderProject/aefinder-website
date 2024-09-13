@@ -38,9 +38,9 @@ export default function CardListModule({ moduleData }: ICardListModuleProps) {
             <div className={styles.cardTitleColBox}>
               <div className={styles.cardTitleCol}>Seamless Integration</div>
               <div className={styles.cardDescriptionCol}>
-                AeFinder index blockchain data seamlessly and enhances data accessibility, enabling AeIndexer
-                efficiently access and retrieve various types of blockchain data, including transactions, addresses,
-                smart contracts, and other on-chain info.
+                AeFinder index blockchain data seamlessly and enhances data accessibility, enabling dApps efficiently
+                access and retrieve various types of blockchain data, including transactions, addresses, smart
+                contracts, and other on-chain info.
               </div>
             </div>
             <Image

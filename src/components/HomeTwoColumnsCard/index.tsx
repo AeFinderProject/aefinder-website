@@ -62,7 +62,7 @@ export default function HomeTwoColumnsCard(props: HomeTwoColumnsCardProps) {
           {titleText && (
             <motion.div variants={variantDownToUp(0)}>
               <div className={clsx([styles.sectionTitle, styles.graphicTextModuleTitle])}>
-                <div style={{ color: '#127FFF' }}>AeFinder</div>
+                <div style={{ color: '#127FFF' }}>AeIndexer</div>
                 <div>Powerful Indexer for Blockchain Data Access</div>
               </div>
             </motion.div>
