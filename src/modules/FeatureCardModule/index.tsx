@@ -38,9 +38,9 @@ export default function FeatureCardModule({ module: { title, subTitle, commonSty
               <Col md={24} lg={8} className={styles.cardCol}>
                 <div className={styles.featureTileBox}>
                   <div className={styles.step}>Step 1</div>
-                  <div className={styles.featureTile}>Set Up Your AeFinder App</div>
+                  <div className={styles.featureTile}>Set Up Your AeIndexer</div>
                   <div className={styles.featureDes}>
-                    Customize the AeFinder App to meet your specific data requirements.
+                    Customize the AeIndexer to meet your specific data requirements.
                   </div>
                 </div>
                 <Image src="/img/step1.png" alt="step1" width={205} height={190} priority />
@@ -54,7 +54,7 @@ export default function FeatureCardModule({ module: { title, subTitle, commonSty
                   <div className={styles.step}>Step 2</div>
                   <div className={styles.featureTile}>Query Data</div>
                   <div className={styles.featureDes}>
-                    Use GraphQL queries to retrieve the required blockchain data for your dApps in AeFinder App.
+                    Use GraphQL queries to retrieve the required blockchain data for your dApps in AeIndexer.
                   </div>
                 </div>
                 <Image src="/img/step2.png" alt="step2" width={193} height={190} priority />
