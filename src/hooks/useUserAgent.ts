@@ -6,7 +6,7 @@ export function useUserAgent(ua?: string) {
   const [type, setType] = useState(DEVICE_TYPE.WebChrome); // default web chrome
 
   useEffect(() => {
-    const uaPrams = ua || navigator?.userAgent || '';
+    const uaPrams = ua ?? navigator?.userAgent ?? '';
     const uaParse = parseUserAgent(uaPrams);
 
     if (uaParse.isMobile) {

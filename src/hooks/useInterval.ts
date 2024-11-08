@@ -9,7 +9,7 @@ const useInterval = (callback: () => void, delay?: number | null, deps?: Depende
   useDeepCompareEffect(() => {
     savedCallback.current?.();
     if (delay !== null) {
-      const interval = setInterval(() => savedCallback.current?.(), delay || 0);
+      const interval = setInterval(() => savedCallback.current?.(), delay ?? 0);
       return () => clearInterval(interval);
     }
     return undefined;

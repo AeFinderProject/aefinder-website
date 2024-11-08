@@ -5,7 +5,7 @@ import { useCallback } from 'react';
 import { openWithBlank } from '@/utils/router';
 import styles from './styles.module.scss';
 
-export default function WebChromeDownloadButton({ storeUrl }: { storeUrl: string }) {
+export default function WebChromeDownloadButton({ storeUrl }: { readonly storeUrl: string }) {
   const chromeInfo = downloadData.chrome;
 
   const goChromeStore = useCallback(() => {

@@ -3,8 +3,7 @@ import { API } from '@/api/constants';
 import { s3Url } from '@/constants/network';
 import { ButtonComponent, ButtonKey, CommonButtonComponent } from '@/types/components/button';
 import { DescriptionComponent } from '@/types/components/description';
-import { GlobalModuleType } from '@/types/global';
-import { GlobalConfig } from '@/types/global';
+import { GlobalConfig, GlobalModuleType } from '@/types/global';
 import { Footer } from '@/types/global/footer';
 import { Header } from '@/types/global/header';
 import { Module, ModuleType } from '@/types/modules';
@@ -156,11 +155,11 @@ const formatModule = (moduleItem: any): Module | undefined => {
         buttonList: formatButtonList(moduleItem.buttonList),
         descriptionList: formatDescriptionList(moduleItem.descriptionList),
         commonStyles: {
-          paddingTop: moduleItem.paddingTop || undefined,
-          paddingBottom: moduleItem.paddingBottom || undefined,
-          mobilePaddingTop: moduleItem.mobilePaddingTop || undefined,
-          mobilePaddingBottom: moduleItem.mobilePaddingBottom || undefined,
-          defaultBackgroundColor: moduleItem.defaultBackgroundColor || undefined,
+          paddingTop: moduleItem.paddingTop,
+          paddingBottom: moduleItem.paddingBottom,
+          mobilePaddingTop: moduleItem.mobilePaddingTop,
+          mobilePaddingBottom: moduleItem.mobilePaddingBottom,
+          defaultBackgroundColor: moduleItem.defaultBackgroundColor,
         },
       };
     case ModuleType.GraphicTextModule:
@@ -179,11 +178,11 @@ const formatModule = (moduleItem: any): Module | undefined => {
         buttonList: formatButtonList(moduleItem.buttonList) as CommonButtonComponent[],
         type: moduleItem.type,
         commonStyles: {
-          paddingTop: moduleItem.paddingTop || undefined,
-          paddingBottom: moduleItem.paddingBottom || undefined,
-          mobilePaddingTop: moduleItem.mobilePaddingTop || undefined,
-          mobilePaddingBottom: moduleItem.mobilePaddingBottom || undefined,
-          defaultBackgroundColor: moduleItem.defaultBackgroundColor || undefined,
+          paddingTop: moduleItem.paddingTop,
+          paddingBottom: moduleItem.paddingBottom,
+          mobilePaddingTop: moduleItem.mobilePaddingTop,
+          mobilePaddingBottom: moduleItem.mobilePaddingBottom,
+          defaultBackgroundColor: moduleItem.defaultBackgroundColor,
           fontColor: moduleItem.fontColor || '',
         },
       };
@@ -199,13 +198,13 @@ const formatModule = (moduleItem: any): Module | undefined => {
         },
         dataArray: formatDescriptionList(moduleItem.dataArray),
         commonStyles: {
-          paddingTop: moduleItem.paddingTop || undefined,
-          paddingBottom: moduleItem.paddingBottom || undefined,
-          mobilePaddingTop: moduleItem.mobilePaddingTop || undefined,
-          mobilePaddingBottom: moduleItem.mobilePaddingBottom || undefined,
-          defaultBackgroundColor: moduleItem.defaultBackgroundColor || undefined,
-          defaultCardBackgroundColor: moduleItem.defaultCardBackgroundColor || undefined,
-          defaultImgContainerBackgroundColor: moduleItem.defaultImgContainerBackgroundColor || undefined,
+          paddingTop: moduleItem.paddingTop,
+          paddingBottom: moduleItem.paddingBottom,
+          mobilePaddingTop: moduleItem.mobilePaddingTop,
+          mobilePaddingBottom: moduleItem.mobilePaddingBottom,
+          defaultBackgroundColor: moduleItem.defaultBackgroundColor,
+          defaultCardBackgroundColor: moduleItem.defaultCardBackgroundColor,
+          defaultImgContainerBackgroundColor: moduleItem.defaultImgContainerBackgroundColor,
         },
       };
     case ModuleType.PartnersModule:
@@ -217,12 +216,12 @@ const formatModule = (moduleItem: any): Module | undefined => {
         },
         list: formatPartnerList(moduleItem.list),
         commonStyles: {
-          paddingTop: moduleItem.paddingTop || undefined,
-          paddingBottom: moduleItem.paddingBottom || undefined,
-          mobilePaddingTop: moduleItem.mobilePaddingTop || undefined,
-          mobilePaddingBottom: moduleItem.mobilePaddingBottom || undefined,
-          defaultBackgroundColor: moduleItem.defaultBackgroundColor || undefined,
-          defaultCardBackgroundColor: moduleItem.defaultCardBackgroundColor || undefined,
+          paddingTop: moduleItem.paddingTop,
+          paddingBottom: moduleItem.paddingBottom,
+          mobilePaddingTop: moduleItem.mobilePaddingTop,
+          mobilePaddingBottom: moduleItem.mobilePaddingBottom,
+          defaultBackgroundColor: moduleItem.defaultBackgroundColor,
+          defaultCardBackgroundColor: moduleItem.defaultCardBackgroundColor,
         },
       };
     case ModuleType.ButtonBelowTextModule:
@@ -235,11 +234,11 @@ const formatModule = (moduleItem: any): Module | undefined => {
         descriptionList: formatDescriptionList(moduleItem.descriptionList),
         buttonList: formatButtonList(moduleItem.buttonList),
         commonStyles: {
-          paddingTop: moduleItem.paddingTop || undefined,
-          paddingBottom: moduleItem.paddingBottom || undefined,
-          mobilePaddingTop: moduleItem.mobilePaddingTop || undefined,
-          mobilePaddingBottom: moduleItem.mobilePaddingBottom || undefined,
-          defaultBackgroundColor: moduleItem.defaultBackgroundColor || undefined,
+          paddingTop: moduleItem.paddingTop,
+          paddingBottom: moduleItem.paddingBottom,
+          mobilePaddingTop: moduleItem.mobilePaddingTop,
+          mobilePaddingBottom: moduleItem.mobilePaddingBottom,
+          defaultBackgroundColor: moduleItem.defaultBackgroundColor,
         },
       };
     case ModuleType.FeatureCardModule:
@@ -258,12 +257,12 @@ const formatModule = (moduleItem: any): Module | undefined => {
           : undefined,
         featureList: formatFeatureList(moduleItem.featureList),
         commonStyles: {
-          paddingTop: moduleItem.paddingTop || undefined,
-          paddingBottom: moduleItem.paddingBottom || undefined,
-          mobilePaddingTop: moduleItem.mobilePaddingTop || undefined,
-          mobilePaddingBottom: moduleItem.mobilePaddingBottom || undefined,
-          defaultBackgroundColor: moduleItem.defaultBackgroundColor || undefined,
-          defaultCardBackgroundColor: moduleItem.defaultCardBackgroundColor || undefined,
+          paddingTop: moduleItem.paddingTop,
+          paddingBottom: moduleItem.paddingBottom,
+          mobilePaddingTop: moduleItem.mobilePaddingTop,
+          mobilePaddingBottom: moduleItem.mobilePaddingBottom,
+          defaultBackgroundColor: moduleItem.defaultBackgroundColor,
+          defaultCardBackgroundColor: moduleItem.defaultCardBackgroundColor,
         },
       };
     case ModuleType.InfiniteScrollCarouselModule:
@@ -277,11 +276,11 @@ const formatModule = (moduleItem: any): Module | undefined => {
           : undefined,
         carouselList: formatCarouselList(moduleItem.carouselList),
         commonStyles: {
-          paddingTop: moduleItem.paddingTop || undefined,
-          paddingBottom: moduleItem.paddingBottom || undefined,
-          mobilePaddingTop: moduleItem.mobilePaddingTop || undefined,
-          mobilePaddingBottom: moduleItem.mobilePaddingBottom || undefined,
-          defaultBackgroundColor: moduleItem.defaultBackgroundColor || undefined,
+          paddingTop: moduleItem.paddingTop,
+          paddingBottom: moduleItem.paddingBottom,
+          mobilePaddingTop: moduleItem.mobilePaddingTop,
+          mobilePaddingBottom: moduleItem.mobilePaddingBottom,
+          defaultBackgroundColor: moduleItem.defaultBackgroundColor,
         },
       };
     default:

@@ -1,5 +1,3 @@
-// import dynamic from 'next/dynamic';
-// export default dynamic(() => import('@/pageComponents/Home'));
 import { getFooter, getHeader, getPage } from '@/api/utils';
 import HomeMain from '@/pageComponents/Home/HomeMain';
 

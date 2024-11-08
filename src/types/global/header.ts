@@ -36,4 +36,6 @@ export type TopMenu = Navigation & {
   isShowSecondMenus?: boolean;
 };
 
-export type SecondMenu = Navigation;
+export type SecondMenu = Navigation & {
+  isShow?: boolean;
+};

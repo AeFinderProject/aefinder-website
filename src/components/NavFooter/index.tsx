@@ -83,18 +83,17 @@ export default function NavFooter({ className, style, footerMediaClassName, data
                 return (
                   <div key={'FooterFirstMenu-' + item.title + index} className={styles.menuGroup}>
                     {item.type === NavigationType.NOT_JUMP && <div className={styles.firstMenus}>{item.title}</div>}
-                    {item?.children &&
-                      item.children?.map((v, k) => {
-                        return (
-                          <div
-                            key={'FooterSecondMenu-' + v.title + k}
-                            className={styles.secondMenus}
-                            onClick={() => switchPage(v.type, v.path)}
-                          >
-                            {v.title}
-                          </div>
-                        );
-                      })}
+                    {item?.children?.map((v, k) => {
+                      return (
+                        <div
+                          key={'FooterSecondMenu-' + v.title + k}
+                          className={styles.secondMenus}
+                          onClick={() => switchPage(v.type, v.path)}
+                        >
+                          {v.title}
+                        </div>
+                      );
+                    })}
                   </div>
                 );
               })}

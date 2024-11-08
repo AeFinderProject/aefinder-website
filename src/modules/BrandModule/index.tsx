@@ -55,7 +55,7 @@ export default function BrandModule({ type, moduleData }: BrandModuleProps) {
                     className={styles.desc}
                     iconSrc={item.icon?.filename_disk ? s3Url + item.icon?.filename_disk : ''}
                     gap={10}
-                    content={item.text || ''}
+                    content={item.text ?? ''}
                   />
                 );
               })}
@@ -79,7 +79,7 @@ export default function BrandModule({ type, moduleData }: BrandModuleProps) {
                 ) : (
                   <CommonButton
                     key={'BrandModule' + '_' + index + '_' + btn.key}
-                    text={btn?.text || ''}
+                    text={btn?.text ?? ''}
                     fontColor={btn.commonStyles.default?.fontColor}
                     backgroundColor={btn.commonStyles.default?.backgroundColor}
                     borderColor={btn.commonStyles.default?.borderColor}
@@ -101,7 +101,7 @@ export default function BrandModule({ type, moduleData }: BrandModuleProps) {
             height={640}
             className={clsx(['flex-row-center', styles.mainImage])}
             alt="homeMainImage"
-            layout="intrinsic" // TODO
+            layout="intrinsic"
             priority
           />
         </div>

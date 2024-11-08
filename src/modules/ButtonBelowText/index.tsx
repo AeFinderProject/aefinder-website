@@ -35,7 +35,7 @@ export function ButtonBelowTextModule({ module }: IButtonBelowTextProps) {
                   key={'Description' + '_' + index}
                   className={styles.descriptionItem}
                   iconSrc={item.icon?.filename_disk ? s3Url + item.icon?.filename_disk : ''}
-                  content={item.text || ''}
+                  content={item.text ?? ''}
                 />
               );
             })}
@@ -47,7 +47,7 @@ export function ButtonBelowTextModule({ module }: IButtonBelowTextProps) {
               return (
                 <CommonButton
                   key={'ButtonBelowTextModule' + '_' + index + '_' + btn.key}
-                  text={btn?.text || ''}
+                  text={btn?.text ?? ''}
                   fontColor={btn.commonStyles.default?.fontColor}
                   backgroundColor={btn.commonStyles.default?.backgroundColor}
                   borderColor={btn.commonStyles.default?.borderColor}

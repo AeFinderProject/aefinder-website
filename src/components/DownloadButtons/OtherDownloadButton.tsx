@@ -7,7 +7,7 @@ import { openWithBlank } from '@/utils/router';
 import { useCallback } from 'react';
 
 export type OtherDownloadButtonProps = {
-  url: string;
+  readonly url: string;
 };
 
 export default function OtherDownloadButton({ url }: OtherDownloadButtonProps) {

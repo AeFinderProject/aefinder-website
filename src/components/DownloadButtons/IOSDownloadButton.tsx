@@ -5,7 +5,7 @@ import { useCallback } from 'react';
 import { openWithBlank } from '@/utils/router';
 import styles from './styles.module.scss';
 
-export default function IOSDownloadButton({ storeUrl }: { storeUrl: string }) {
+export default function IOSDownloadButton({ storeUrl }: { readonly storeUrl: string }) {
   const IOSInfo = downloadData.ios;
 
   const goAppleStore = useCallback(() => {

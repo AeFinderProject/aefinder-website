@@ -2,10 +2,10 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 
 interface ILinkForBlankProps {
-  href: string;
-  className?: string;
-  ariaLabel?: string;
-  element?: ReactNode;
+  readonly href: string;
+  readonly className?: string;
+  readonly ariaLabel?: string;
+  readonly element?: ReactNode;
 }
 export default function LinkForBlank({ href, className, ariaLabel, element }: ILinkForBlankProps) {
   return (

@@ -125,7 +125,7 @@ export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: 
           <Button
             type="text"
             className={styles.downloadBtn}
-            onClick={() => openWithBlank(data.actionButton?.link.url || '')}
+            onClick={() => openWithBlank(data.actionButton?.link.url ?? '')}
           >
             {data?.actionButton.text}
           </Button>
