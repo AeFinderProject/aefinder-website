@@ -13,10 +13,10 @@ import { s3Url } from '@/constants/network';
 import MenuGraySVG from '../SVGComponents/MenuGraySVG';
 
 export interface INavHeaderProps {
-  className?: string;
-  style?: CSSProperties;
-  path?: ROUTER;
-  data: Header;
+  readonly className?: string;
+  readonly style?: CSSProperties;
+  readonly path?: ROUTER;
+  readonly data: Header;
 }
 
 export default function NavHeader({ className, style, path = ROUTER.DEFAULT, data }: INavHeaderProps) {
@@ -149,7 +149,7 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
               <div
                 className={styles.linkBtnWrap}
                 onClick={() =>
-                  openWithBlank(data.actionButton?.link.url || '', data.actionButton?.link.target || '_blank')
+                  openWithBlank(data.actionButton?.link.url ?? '', data.actionButton?.link.target ?? '_blank')
                 }
               >
                 <div

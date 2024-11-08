@@ -80,7 +80,7 @@ export default function HomeTwoColumnsCard(props: HomeTwoColumnsCardProps) {
                   iconSrc={item?.icon?.filename_disk ? s3Url + item?.icon?.filename_disk : ''}
                   iconWidth={item?.iconWidth}
                   iconHeight={item?.iconHeight}
-                  content={item.text || ''}
+                  content={item.text ?? ''}
                   contentColor={style?.color}
                   gap={item?.iconMarginRight}
                   isLast={idx === contents.length - 1}
@@ -97,7 +97,7 @@ export default function HomeTwoColumnsCard(props: HomeTwoColumnsCardProps) {
                     <motion.span variants={variant(contents.length * 0.5)}>
                       <CommonButton
                         className={styles.btn}
-                        text={button.text || ''}
+                        text={button.text ?? ''}
                         fontColor={button.commonStyles.default?.fontColor}
                         backgroundColor={button.commonStyles.default?.backgroundColor}
                         borderColor={button.commonStyles.default?.borderColor}
@@ -122,7 +122,7 @@ export default function HomeTwoColumnsCard(props: HomeTwoColumnsCardProps) {
         src={imgSrc}
         width={500}
         height={500}
-        layout="intrinsic" // TODO
+        layout="intrinsic"
         className={clsx(['flex-row-center', imageClassName])}
         alt="infoImg"
       />

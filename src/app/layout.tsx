@@ -13,9 +13,9 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { readonly children: React.ReactNode }) {
   const env = process.env.NEXT_PUBLIC_NETWORK_ENV;
-  const googleAnalyticsId = env === 'mainnet' ? process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || '' : '';
+  const googleAnalyticsId = env === 'mainnet' ? process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? '' : '';
   return (
     <html lang="en">
       <body>{children}</body>

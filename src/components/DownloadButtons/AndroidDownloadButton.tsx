@@ -5,7 +5,7 @@ import { useCallback } from 'react';
 import { openWithBlank } from '@/utils/router';
 import styles from './styles.module.scss';
 
-export default function AndroidDownloadButton({ storeUrl }: { storeUrl: string }) {
+export default function AndroidDownloadButton({ storeUrl }: { readonly storeUrl: string }) {
   const androidInfo = downloadData.android;
 
   const goGooglePlay = useCallback(() => {

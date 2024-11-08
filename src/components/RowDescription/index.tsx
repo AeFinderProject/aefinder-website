@@ -4,17 +4,17 @@ import styles from './styles.module.scss';
 import { DescriptionComponent } from '@/types/components/description';
 
 export interface RowDescriptionProps {
-  iconSrc?: string;
-  iconWidth?: number;
-  iconHeight?: number;
-  gap?: number;
-  content: string;
-  contentSize?: number;
-  contentColor?: string;
-  className?: string;
-  subContentList?: Array<DescriptionComponent>;
-  multiLayer?: boolean;
-  isLast: boolean;
+  readonly iconSrc?: string;
+  readonly iconWidth?: number;
+  readonly iconHeight?: number;
+  readonly gap?: number;
+  readonly content: string;
+  readonly contentSize?: number;
+  readonly contentColor?: string;
+  readonly className?: string;
+  readonly subContentList?: Array<DescriptionComponent>;
+  readonly multiLayer?: boolean;
+  readonly isLast: boolean;
 }
 
 export default function RowDescription(props: RowDescriptionProps) {
@@ -32,11 +32,16 @@ export default function RowDescription(props: RowDescriptionProps) {
     isLast = false,
   } = props;
 
+  let marginBottom;
+
+  if (isLast) {
+    marginBottom = '0';
+  } else {
+    marginBottom = multiLayer ? '40px' : '16px';
+  }
+
   return (
-    <div
-      className={clsx([styles.rowDescription, className])}
-      style={{ marginBottom: isLast ? '0' : multiLayer ? '40px' : '16px' }}
-    >
+    <div className={clsx([styles.rowDescription, className])} style={{ marginBottom }}>
       {iconSrc && (
         <CommonImage
           src={iconSrc}
@@ -57,7 +62,13 @@ export default function RowDescription(props: RowDescriptionProps) {
   );
 }
 
-function SecondaryList({ content, subContentList }: { content: string; subContentList: Array<DescriptionComponent> }) {
+function SecondaryList({
+  content,
+  subContentList,
+}: {
+  readonly content: string;
+  readonly subContentList: Array<DescriptionComponent>;
+}) {
   return (
     <div className={styles.secondaryList}>
       <div className={styles.title}>{content}</div>

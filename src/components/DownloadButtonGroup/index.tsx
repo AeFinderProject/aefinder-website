@@ -9,21 +9,21 @@ import { CSSProperties } from 'react';
 import styles from './styles.module.scss';
 
 export type DownloadButtonGroupProps = {
-  className?: string;
-  style?: CSSProperties;
-  type: DEVICE_TYPE;
-  iosStoreUrl?: string;
-  androidStoreUrl?: string;
-  chromeStoreUrl?: string;
-  otherDownloadUrl?: string;
-  goDownloadPageUrl?: string;
-  downloadPageBtnClassName?: string;
+  readonly className?: string;
+  readonly style?: CSSProperties;
+  readonly type: DEVICE_TYPE;
+  readonly iosStoreUrl?: string;
+  readonly androidStoreUrl?: string;
+  readonly chromeStoreUrl?: string;
+  readonly otherDownloadUrl?: string;
+  readonly goDownloadPageUrl?: string;
+  readonly downloadPageBtnClassName?: string;
 };
 
 export type WebChromeButtonGroupProps = {
-  downloadPageBtnClassName?: string;
-  storeUrl: string;
-  goDownloadPageUrl?: string;
+  readonly downloadPageBtnClassName?: string;
+  readonly storeUrl: string;
+  readonly goDownloadPageUrl?: string;
 };
 
 function WebChromeButtonGroup({ downloadPageBtnClassName, storeUrl, goDownloadPageUrl }: WebChromeButtonGroupProps) {
@@ -54,7 +54,7 @@ export default function DownloadButtonGroup(props: DownloadButtonGroupProps) {
     <div className={clsx([styles.DownloadBtnGroup, className])} style={style}>
       {type === DEVICE_TYPE.WebChrome && chromeStoreUrl && (
         <WebChromeButtonGroup
-          downloadPageBtnClassName={downloadPageBtnClassName || ''}
+          downloadPageBtnClassName={downloadPageBtnClassName ?? ''}
           storeUrl={chromeStoreUrl}
           goDownloadPageUrl={goDownloadPageUrl}
         />
