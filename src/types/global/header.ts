@@ -28,7 +28,7 @@ export enum NavigationType {
 export type Navigation = {
   type: NavigationType;
   title: string;
-  path?: string; // route path or jump link
+  path?: string;
 };
 
 export type TopMenu = Navigation & {
