@@ -38,7 +38,6 @@ export default function FeatureCard(props: FeatureCardProps) {
       onMouseOut={onMouseOut}
     >
       <div className={styles.iconWrap}>
-        {/* Two pictures are superimposed to speed up the speed of displaying pictures when hovering */}
         <CommonImage
           quality={100}
           className={styles.iconHover}
